@@ -26,6 +26,11 @@ VOID EFIAPI ProcessLibraryConstructorList(VOID);
 
 VOID UartInit(VOID)
 {
+  UINT8 *base = (UINT8 *)0x9eef4000ull;
+  for (UINTN i = 0; i < 0x00708000; i++) {
+    base[i] = 0;
+  }
+
   SerialPortInitialize();
 
   DEBUG((EFI_D_INFO, "\nTianoCore on SC8830 (ARM)\n"));
@@ -52,11 +57,6 @@ VOID Main (IN  UINT64  StartTimeStamp)
 
   /* Enable program flow prediction, if supported */
   ArmEnableBranchPrediction();
-
-  UINT8 *base = (UINT8 *)0x9eef4000ull;
-  for (UINTN i = 0; i < 0x00708000; i++) {
-    base[i] = 0;
-  }
 
   // Declare UEFI region
   MemoryBase     = FixedPcdGet32(PcdSystemMemoryBase);
@@ -97,7 +97,7 @@ VOID Main (IN  UINT64  StartTimeStamp)
   BuildStackHob ((UINTN)StacksBase, StacksSize);
 
   // TODO: Call CpuPei as a library
-  BuildCpuHob (ArmGetPhysicalAddressBits (), PcdGet8 (PcdPrePiCpuIoSize));
+  BuildCpuHob (40, PcdGet8 (PcdPrePiCpuIoSize));
 
   // Set the Boot Mode
   SetBootMode (BOOT_WITH_FULL_CONFIGURATION);

@@ -121,7 +121,7 @@ SMBIOS_TABLE_TYPE0 mBIOSInfoType0 = {
 };
 
 CHAR8 *mBIOSInfoType0Strings[] = {
-  "Bad Dodo (Bad Bunny).", // Vendor String
+  "Dodo viC (vice2008).", // Vendor String
   "Built: " __DATE__,             // BiosVersion String
   "Built: " __DATE__,             // BiosReleaseDate String
   NULL
@@ -142,8 +142,8 @@ SMBIOS_TABLE_TYPE1 mSysInfoType1 = {
   6,    // Family String
 };
 CHAR8  *mSysInfoType1Strings[] = {
-  "Spreadtrum",
-  "SC8830",
+  "Samsung Galaxy Tab E 7.0",
+  "SM-T113NU",
   "",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
@@ -176,8 +176,8 @@ SMBIOS_TABLE_TYPE2  mBoardInfoType2 = {
   { 0 }                     // ContainedObjectHandles[1];
 };
 CHAR8  *mBoardInfoType2Strings[] = {
-  "Spreadtrum",
-  "SC8830",
+  "Samsung Galaxy Tab E 7.0",
+  "SM-T113NU",
   "",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
@@ -207,7 +207,7 @@ SMBIOS_TABLE_TYPE3  mEnclosureInfoType3 = {
   { { 0 } },    // ContainedElements[1];
 };
 CHAR8  *mEnclosureInfoType3Strings[] = {
-  "Spreadtrum",
+  "Samsung Galaxy Tab E 7.0",
   "1",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",

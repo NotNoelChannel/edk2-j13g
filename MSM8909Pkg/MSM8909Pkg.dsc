@@ -107,10 +107,11 @@
 [PcdsFixedAtBuild.common]
   gEfiMdePkgTokenSpaceGuid.PcdDefaultTerminalType|4
 
+  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Dodo viC (vice2008)"
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"Alpha"
 
   # Boot all cores or nothing :)
-  gArmPlatformTokenSpaceGuid.PcdCoreCount|1
+  gArmPlatformTokenSpaceGuid.PcdCoreCount|4
   gArmPlatformTokenSpaceGuid.PcdClusterCount|1
 
 
