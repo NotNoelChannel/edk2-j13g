@@ -24,7 +24,6 @@
 
 [Sources.ARM]
   ReleaseInfo.S | GCC
-  ProcessorSupport.S | GCC
   ModuleEntryPoint.S | GCC
 
 [Packages]

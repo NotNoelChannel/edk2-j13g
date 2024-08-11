@@ -75,7 +75,7 @@
   VarCheckLib|MdeModulePkg/Library/VarCheckLib/VarCheckLib.inf
 
   # SimpleFbDxe
-  FrameBufferBltLib|MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
+  FrameBufferBltLib|MSM8909Pkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
   
    # Platform Drivers
   SerialPortLib|MSM8909Pkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf

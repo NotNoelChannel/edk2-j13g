@@ -87,6 +87,8 @@
 
   SemihostLib|ArmPkg/Library/SemihostLib/SemihostLib.inf
 
+  ImagePropertiesRecordLib|MdeModulePkg/Library/ImagePropertiesRecordLib/ImagePropertiesRecordLib.inf
+
   TpmMeasurementLib|MdeModulePkg/Library/TpmMeasurementLibNull/TpmMeasurementLibNull.inf
   AuthVariableLib|MdeModulePkg/Library/AuthVariableLibNull/AuthVariableLibNull.inf
 
@@ -253,7 +255,7 @@
   # IO is mapped to memory space, so we use the same size of
   # PcdPrePiCpuMemorySize
   #
-  gEmbeddedTokenSpaceGuid.PcdPrePiCpuIoSize|44
+  gEmbeddedTokenSpaceGuid.PcdPrePiCpuIoSize|0
   gEfiMdePkgTokenSpaceGuid.PcdMaximumUnicodeStringLength|1000000
   gEfiMdePkgTokenSpaceGuid.PcdMaximumAsciiStringLength|1000000
   gEfiMdePkgTokenSpaceGuid.PcdMaximumLinkedListLength|1000000

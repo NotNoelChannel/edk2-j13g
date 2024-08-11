@@ -63,7 +63,6 @@ VOID Main (IN  UINT64  StartTimeStamp)
   MemorySize     = FixedPcdGet32(PcdSystemMemorySize);
   UefiMemoryBase = FixedPcdGet32(PcdUefiMemPoolBase);
   UefiMemorySize = FixedPcdGet32(PcdUefiMemPoolSize);
-  StacksSize     = FixedPcdGet32(PcdPrePiStackSize);
   StacksBase     = UefiMemoryBase + UefiMemorySize - StacksSize;
 
   DEBUG(
@@ -120,23 +119,11 @@ VOID Main (IN  UINT64  StartTimeStamp)
 
   // Assume the FV that contains the SEC (our code) also contains a compressed FV.
   Status = DecompressFirstFv ();
-  // ASSERT_EFI_ERROR (Status);
-  if (EFI_ERROR(Status))
-    {
-        DEBUG((EFI_D_ERROR, "FV does not contains a compressed FV\n"));
-    }else{
-       DEBUG((EFI_D_INFO | EFI_D_LOAD, "FV contains a compressed FV\n"));
-  }
+  ASSERT_EFI_ERROR (Status);
 
   // Load the DXE Core and transfer control to it
   Status = LoadDxeCoreFromFv (NULL, 0);
-  //ASSERT_EFI_ERROR (Status);
-  if (EFI_ERROR(Status))
-    {
-        DEBUG((EFI_D_ERROR, "Failed to load DXE Core\n"));
-    }else{
-       DEBUG((EFI_D_INFO | EFI_D_LOAD, "Loading DXE Core\n"));
-  }
+  ASSERT_EFI_ERROR (Status);
 
 }
 

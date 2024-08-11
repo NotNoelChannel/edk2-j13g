@@ -27,4 +27,4 @@
   gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|600
   gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|1024
   gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|600
-  gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32
+  gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|16
