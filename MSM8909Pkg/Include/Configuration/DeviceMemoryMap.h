@@ -59,8 +59,6 @@ typedef struct {
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
 //                                                    EFI_RESOURCE_ EFI_RESOURCE_ATTRIBUTE_        ARM_REGION_ATTRIBUTE_
 //MemBase,   MemSize,   MemLabel(32 Char.), BuildHob, ResourceType, ResourceAttribute, MemoryType, CacheAttributes
-//------------- Register Regions ----------
-{0x00000000, 0x20000000, "Peripherals",      AddMem, MEM_RES, UNCACHEABLE, RtCode,   DEVICE},
 //------------- DDR ------},
 {0x80000000, 0x00010000, "HLOS 0",           AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
 {0x80C00000, 0x00040000, "UEFI Stack",       AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
@@ -69,7 +67,12 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
 {0x80200000, 0x00200000, "UEFI FD",          AddMem, SYS_MEM, SYS_MEM_CAP, BsCode, WRITE_BACK},
 {0x9eef4000, 0x00708000, "Display Reserved", AddMem, MEM_RES, WRITE_THROUGH, MaxMem, WRITE_THROUGH},
 {0x80D00000, 0x0F3B0000, "HLOS 2",           AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
-// {0x87800000, 0x00240000, "SMEM",             AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED},
+{0x87800000, 0x00240000, "SMEM",             AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED},
+
+//------------- Register Regions ----------
+{0x12001000, 0x00001000, "GIC Distributor",  AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0x12002000, 0x00001000, "GIC Redistributors",  AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0xf5224000, 0x00001000, "PinCtrl",          AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
 
 //------------- Terminator for MMU ----------
 {0, 0, "Terminator", 0, 0, 0, 0, 0}

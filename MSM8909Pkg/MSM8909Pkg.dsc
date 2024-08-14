@@ -211,6 +211,9 @@
   # SoC Drivers
   #
 
+  # MSM8909Pkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
+  # MSM8909Pkg/Drivers/KeypadDxe/KeypadDxe.inf
+
   #
   # Virtual Keyboard
   #
