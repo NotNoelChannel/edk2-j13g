@@ -1,7 +1,7 @@
 Attempt to create a minimal EDK2 for Samsung Galaxy Tab E 7.0 (SM-T113NU) but should work on SM-T116BU (3G Version)
 
 ## Status
-Boots to DxeCore init.
+Boots to efi shell.
 
 ## Building
 Tested on Ubuntu 22.04.
