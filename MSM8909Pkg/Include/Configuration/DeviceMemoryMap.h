@@ -59,15 +59,16 @@ typedef struct {
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
 //                                                    EFI_RESOURCE_ EFI_RESOURCE_ATTRIBUTE_        ARM_REGION_ATTRIBUTE_
 //MemBase,   MemSize,   MemLabel(32 Char.), BuildHob, ResourceType, ResourceAttribute, MemoryType, CacheAttributes
-
+//------------- Register Regions ----------
+{0x00000000, 0x20000000, "Peripherals",      AddMem, MEM_RES, UNCACHEABLE, RtCode,   DEVICE},
 //------------- DDR ------},
-{0x80000000, 0x00010000, "HLOS 0",           AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
+{0x80000000, 0x00010000, "HLOS 0",           AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
 {0x80C00000, 0x00040000, "UEFI Stack",       AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
 {0x80C40000, 0x00010000, "CPU Vectors",      AddMem, SYS_MEM, SYS_MEM_CAP, BsCode, WRITE_BACK},
 {0x80024000, 0x001DC000, "HLOS 1",           AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
 {0x80200000, 0x00200000, "UEFI FD",          AddMem, SYS_MEM, SYS_MEM_CAP, BsCode, WRITE_BACK},
-{0x80D00000, 0x03300000, "HLOS 2",           AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
-{0x9eef4000, 0x00708000, "Display Reserved", AddMem, MEM_RES, WRITE_THROUGH, MaxMem, WRITE_THROUGH_XN},
+{0x9eef4000, 0x00708000, "Display Reserved", AddMem, MEM_RES, WRITE_THROUGH, MaxMem, WRITE_THROUGH},
+{0x80D00000, 0x0F3B0000, "HLOS 2",           AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
 // {0x87800000, 0x00240000, "SMEM",             AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED},
 
 //------------- Terminator for MMU ----------
