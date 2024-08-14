@@ -520,7 +520,7 @@ PlatformBootManagerBeforeConsole (
   // Now add the device path of all handles with QcomKeypadDeviceProtocolGuid
   // on them to ConIn.
   //
-  FilterAndProcess (&gEFIDroidKeypadDeviceProtocolGuid, NULL, AddInput);
+  FilterAndProcess (&gSc8830KeypadDeviceProtocolGuid, NULL, AddInput);
   // Register setup key then
   PlatformRegisterSetupKey();
 
@@ -592,6 +592,12 @@ PlatformBootManagerAfterConsole (
 
   EfiBootManagerRefreshAllBootOption ();
 
+  //	
+  // Register UEFI Shell	
+  //	
+  PlatformRegisterFvBootOption (	
+    &gUefiShellFileGuid, L"UEFI Shell", LOAD_OPTION_ACTIVE	
+    );
   PlatformRegisterOptionsAndKeys ();
 }
 

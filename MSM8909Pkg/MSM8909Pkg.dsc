@@ -108,7 +108,7 @@
   gEfiMdePkgTokenSpaceGuid.PcdDefaultTerminalType|4
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Dodo viC (vice2008)"
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"Alpha"
+  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"1.0-rc2"
 
   # Boot all cores or nothing :)
   gArmPlatformTokenSpaceGuid.PcdCoreCount|4
