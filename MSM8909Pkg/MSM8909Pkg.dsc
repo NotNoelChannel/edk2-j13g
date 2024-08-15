@@ -74,6 +74,8 @@
   TpmMeasurementLib|MdeModulePkg/Library/TpmMeasurementLibNull/TpmMeasurementLibNull.inf
   VarCheckLib|MdeModulePkg/Library/VarCheckLib/VarCheckLib.inf
 
+  # SoC Libraries
+
   # SimpleFbDxe
   FrameBufferBltLib|MSM8909Pkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
   
@@ -82,7 +84,8 @@
 
   PlatformBootManagerLib|MSM8909Pkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
   MemoryInitPeiLib|MSM8909Pkg/Library/MemoryInitPeiLib/PeiMemoryAllocationLib.inf
-  PlatformPeiLib|MSM8909Pkg/Library/PlatformPeiLib/PlatformPeiLib.inf
+
+  PlatformPeiLib|ArmPlatformPkg/PlatformPei/PlatformPeiLib.inf
 
 [LibraryClasses.common.SEC]
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf
@@ -108,7 +111,10 @@
   gEfiMdePkgTokenSpaceGuid.PcdDefaultTerminalType|4
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Dodo viC (vice2008)"
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"1.0-rc2"
+  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"1.0-rc1"
+
+  # Memory protection
+  gEfiMdeModulePkgTokenSpaceGuid.PcdImageProtectionPolicy|0x00000000
 
   # Boot all cores or nothing :)
   gArmPlatformTokenSpaceGuid.PcdCoreCount|4
@@ -210,6 +216,7 @@
   #
   # SoC Drivers
   #
+  MSM8909Pkg/Drivers/SprdGpioDxe/SprdGpioDxe.inf
 
   # MSM8909Pkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
   # MSM8909Pkg/Drivers/KeypadDxe/KeypadDxe.inf

@@ -123,6 +123,11 @@ READ_LOCK_STATUS   = TRUE
   #
   # GPIO
   #
+  INF MSM8909Pkg/Drivers/SprdGpioDxe/SprdGpioDxe.inf
+
+  #
+  # Soc Drivers
+  #
 
   #
   # Virtual Keyboard

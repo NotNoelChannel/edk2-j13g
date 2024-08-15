@@ -83,7 +83,7 @@ FrameBufferBltLibConfigurePixelFormat (
   MergedMasks = (UINT32) (MergedMasks | Masks[3]);
 
   ASSERT (MergedMasks != 0);
-  *BytesPerPixel = (UINT32) ((HighBitSet32 (MergedMasks) + 7) / 8);
+  *BytesPerPixel = 2;
   DEBUG ((DEBUG_INFO, "Bytes per pixel: %d\n", *BytesPerPixel));
 }
 
