@@ -10,7 +10,7 @@ First, clone EDK2.
 
 ```
 cd ..
-git clone https://github.com/tianocore/edk2.git -b edk2-stable202305 --recursive
+git clone https://github.com/tianocore/edk2.git -b edk2-stable202405 --recursive
 git clone https://github.com/tianocore/edk2-platforms.git
 ```
 
@@ -39,3 +39,5 @@ Finally, flash it with Odin.
 SimpleFbDxe screen driver is from imbushuo's [Lumia950XLPkg](https://github.com/WOA-Project/Lumia950XLPkg).
 
 Based on sonic011gamer [edk2-msm8909](https://github.com/sonic011gamer/edk2-msm8909).
+
+SprdGpioDxe driver is from halal-beef's [edk2-exynos9830](https://github.com/halal-beef/edk2-exynos9830).

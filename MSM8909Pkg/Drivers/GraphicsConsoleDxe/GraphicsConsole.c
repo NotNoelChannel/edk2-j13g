@@ -47,6 +47,9 @@ GRAPHICS_CONSOLE_DEV    mGraphicsConsoleDevTemplate = {
 
 GRAPHICS_CONSOLE_MODE_DATA mGraphicsConsoleModeData[] = {
   {100, 31},
+  {128, 40},
+  {128, 31},
+  {160, 42},
   {40, 12}, 
   //
   // New modes can be added here.

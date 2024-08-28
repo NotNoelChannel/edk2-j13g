@@ -126,7 +126,7 @@ READ_LOCK_STATUS   = TRUE
   INF MSM8909Pkg/Drivers/SprdGpioDxe/SprdGpioDxe.inf
 
   #
-  # Soc Drivers
+  # SoC Drivers
   #
 
   #

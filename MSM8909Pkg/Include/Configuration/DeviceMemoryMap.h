@@ -72,6 +72,10 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
 //------------- Register Regions ----------
 {0x12001000, 0x00001000, "GIC Distributor",  AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
 {0x12002000, 0x00001000, "GIC Redistributors",  AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0xf536a000, 0x00001000, "I2C 0",  			 AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0xf536c000, 0x00001000, "I2C 1",  			 AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0xf5370000, 0x00001000, "I2C 2",  			 AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
+{0xf5372000, 0x00001000, "I2C 3",  			 AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
 {0xf5224000, 0x00001000, "PinCtrl",          AddDev, MMAP_IO, UNCACHEABLE, MmIO,   DEVICE},
 
 //------------- Terminator for MMU ----------
