@@ -1,10 +1,7 @@
 name: C/C++ CI
 
 on:
-  push:
-    branches: [ "sdcard" ]
-  pull_request:
-    branches: [ "sdcard" ]
+  workflow_dispatch:
 
 jobs:
   build:
