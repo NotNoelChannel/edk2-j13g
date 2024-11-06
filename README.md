@@ -1,7 +1,7 @@
-Attempt to create a minimal EDK2 for Samsung Galaxy Tab E 7.0 (SM-T113NU) but should work on SM-T116 (3G Version)
+Attempt to create a minimal EDK2 for Samsung Galaxy J1.
 
 ## Status
-Boots to efi shell.
+-
 
 ## Building
 Tested on Ubuntu 22.04.
@@ -28,7 +28,7 @@ Also see [EDK2 website](https://github.com/tianocore/tianocore.github.io/wiki/Us
 
 Then ./scripts/firstrun.sh
 
-Finally, "./scripts/goyavewifi.sh" to compile.
+Finally, "./scripts/j13g.sh" to compile.
 
 Then make a Image from AIK (Android Image Kitchen) and rename image-new.img to boot.img and make a tar for odin.
 
@@ -38,6 +38,6 @@ Finally, flash it with Odin.
 
 SimpleFbDxe screen driver is from imbushuo's [Lumia950XLPkg](https://github.com/WOA-Project/Lumia950XLPkg).
 
-Based on sonic011gamer [edk2-msm8909](https://github.com/sonic011gamer/edk2-msm8909).
+Based on sonic011gamer [edk2-msm8909](https://github.com/sonic011gamer/edk2-msm8909) and on vicenteicc2008 [edk2-goyavewifi](https://github.com/vicenteicc2008/edk2-goyavewifi).
 
 SprdGpioDxe driver is from halal-beef's [edk2-exynos9830](https://github.com/halal-beef/edk2-exynos9830).
