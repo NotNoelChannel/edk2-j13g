@@ -10,6 +10,7 @@
   FLASH_DEFINITION               = MSM8909Pkg/MSM8909Pkg.fdf
 
 !include MSM8909Pkg/MSM8909Pkg.dsc
+!include ArmPkg/Library/ArmSmcPsciResetSystemLib/ArmSmcPsciResetSystemLib.inf
 
 [PcdsFixedAtBuild.common]
   # System Memory (512MB)
